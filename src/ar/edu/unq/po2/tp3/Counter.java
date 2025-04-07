@@ -44,7 +44,7 @@ public class Counter {
 
 //Ej2
 	
-	public int cantidadDePares(int numero) { // no se si funka //TODO cambiar nombre se llama igual q otr arriba
+	public int cantidadNumDePares(int numero) { // no se si funciona como deberia
 		int cantidadPares = 0;
 		while (numero > 0) {
 			cantidadPares += this.unoSi(esPar(numero));
@@ -64,8 +64,8 @@ public class Counter {
 		int numeroConMasParesVisto = 0;
 		int mayorPares = 0;
 		for (int numero : numeros) {
-			if (cantidadDePares(numero) > mayorPares) {
-				mayorPares = cantidadDePares(numero);
+			if (cantidadNumDePares(numero) > mayorPares) {
+				mayorPares = cantidadNumDePares(numero);
 				numeroConMasParesVisto = numero;
 			}
 		}
