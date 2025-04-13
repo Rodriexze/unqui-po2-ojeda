@@ -11,7 +11,11 @@ public class Persona {
 	LocalDate fechaActual = LocalDate.now();
 	
 	private void calculoEdad() {
-		edad = getFechaActual() - getFechaNac(); //cambviar esto
+		edad = getFechaActual().getYear() - getFechaNac().getYear();
+	}
+	
+	public boolean menorQue(Persona p1) {
+		return this.getEdad() < p1.getEdad() ;
 	}
 	
 	public int getEdad() {
