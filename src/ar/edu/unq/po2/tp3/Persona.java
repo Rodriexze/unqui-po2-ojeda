@@ -5,10 +5,10 @@ import java.time.LocalDate;
 
 public class Persona {
 	
-	int edad;
-	String mombre;
-	LocalDate fechaNac;
-	LocalDate fechaActual = LocalDate.now();
+	private int edad;
+	private String nombre;
+	private LocalDate fechaNac;
+	private LocalDate fechaActual = LocalDate.now();
 	
 	private void calculoEdad() {
 		edad = getFechaActual().getYear() - getFechaNac().getYear();
@@ -25,10 +25,10 @@ public class Persona {
 		this.edad = edad;
 	}
 	public String getMombre() {
-		return mombre;
+		return nombre;
 	}
 	public void setMombre(String mombre) {
-		this.mombre = mombre;
+		this.nombre = mombre;
 	}
 
 	public LocalDate getFechaNac() {
@@ -46,5 +46,15 @@ public class Persona {
 	public void setFechaActual(LocalDate fechaActual) {
 		this.fechaActual = fechaActual;
 	}
+	
+	public Persona(String nombre, LocalDate fechaNac) {
+        this.nombre = nombre;
+        this.fechaNac = fechaNac;
+        calculoEdad();
+    }
+	
+	public static Persona crearPersona(String nombre, LocalDate fechaNac) {
+        return new Persona(nombre, fechaNac);
+    }
 	
 }
