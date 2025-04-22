@@ -1,0 +1,31 @@
+1)- ¿Que ventajas en cuanto a polimorfismo brindan las interfaces en java?
+
+Al tener la posibilidad de utilizar interfaces podemos establecer un contrato por sobre las clases que implementen a dicha interfaz,
+modelamos un esquema en el cual cada clase que la implemente debe definir el protocolo presentado, a su vez operamos a un nivel mas
+alto de abstraccion y operamos con mayor polimorfismo o capacidad de que el programa se actualice sin tener que modificar varios 
+sectores, a un costo de ser menos especificos con la informacion que se maneja 
+
+
+2)- ¿Por que no siempre puedo utilizar clases abstractas para agrupar clases polimorficas?
+
+Primero las clases abstractas no permiten herencia multiple, lo cual las interfaces si lo permiten, por otro lado las clases abstractas
+establecen que todo aquel que la extienda debe cumplir con el lema "es un" y establece una relacion jerarquica entre sus calses hijas, 
+las interfaces permiten otorgar mas variedad de funcionalidad con multiples conportamientos y facilita el mantenimiento del codigo
+
+
+3)- ¿Que ventajas tienen las clases abstractas por sobre las interfaces?
+
+Poder realizar implementaciones parciales, el hecho de usar una clase abstracta refuerza mas la estructura jerarquica de la herencia,
+facilita el compartir atributos entre calses y subclases, por la logica que implemtena de "es un" ayuda a que el codigo sea claro y se
+entienda mejor de que va el programa sin tener q leer mucho el codigo en si.
+
+4)- ¿Se puede instancias un ainterface? 
+
+No, al igual que las clases abstractas no se pueden las interfaces solo aportan contrato y definen el conjunto de metodos que deberan
+definir las clases que la implementen a su vez las abstactas aportan solo comportamiento pero no funcionalidad
+
+5)- 
+
+6)- ¿Por que en wollok no se necesitan las interfaces?
+
+Por que no es un lenguaje fuertemente tipado como java 
