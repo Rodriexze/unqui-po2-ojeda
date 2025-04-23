@@ -15,17 +15,17 @@ public class MercadoCentralTestCase {
 	
 	@BeforeEach
 	public void setUp() {
-		arroz = new Producto(10.5, 100);
-		detergente = new Producto(11.5, 100);
-		leche = new ProductoCoop(10,100);
+		arroz = new Producto(10.5, 10);
+		detergente = new Producto(11.5, 10);
+		leche = new ProductoCoop(10,10);
 		mercadito = new MercadoCentral("SuperCam", 00.00);
 	}
 	
 	@Test
 	public void testNumeroDeProductos() {
 		assertEquals(0, mercadito.getNumeroDeProductos());
-		mercadito.agregarProducto(arroz);
-		mercadito.agregarProducto(detergente);
+		mercadito.registrarProducto(arroz);
+		mercadito.registrarProducto(detergente);
 		assertEquals(2, mercadito.getNumeroDeProductos());
 	}
 	
@@ -36,6 +36,18 @@ public class MercadoCentralTestCase {
 		mercadito.registrarProducto(detergente);
 		mercadito.registrarProducto(leche);
 		assertEquals(23, mercadito.getMontoAPagar());
+	}
+	
+	@Test
+	public void testStock() {
+		assertEquals(10, arroz.getStock());
+		assertEquals(10, detergente.getStock());
+		mercadito.registrarProducto(arroz);
+		mercadito.registrarProducto(detergente);
+		mercadito.registrarProducto(leche);
+		assertEquals(9, arroz.getStock());
+		assertEquals(9, detergente.getStock());
+		assertEquals(9, leche.getStock());
 	}
 	
 }

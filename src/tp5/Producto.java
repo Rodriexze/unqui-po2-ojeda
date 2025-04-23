@@ -13,10 +13,8 @@ public class Producto implements Pagable{
 	}
 	
 	public void descontarDeStock() {
-		if (stock>0) {
-			stock -= 1;
-		}
-		//System.out.print("no hay mas ;(");
+		if (stock>0) { stock -= 1; }
+		else { System.out.print("no hay mas ;("); }
 	}
 	
 	
