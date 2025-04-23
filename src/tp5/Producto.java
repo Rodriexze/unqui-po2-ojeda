@@ -16,7 +16,7 @@ public class Producto implements Pagable{
 		if (stock>0) {
 			stock -= 1;
 		}
-		System.out.print("no hay mas ;(");
+		//System.out.print("no hay mas ;(");
 	}
 	
 	
@@ -30,8 +30,8 @@ public class Producto implements Pagable{
 	public int getStock() {
 		return stock;
 	}
-	public void setStock(int stock) {
-		stock = stock;
+	public void setStock(int stockk) {
+		stock = stockk;
 	}
 
 }
